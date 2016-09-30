@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <% include head %>
   </head>
   <body>
+    <% include header %>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <ul>
+      <li><a href="github">Github Api</a></li>
+      <li><a href="crud">CRUD Todo</a></li>
+      <li><a href="socketio">SocketIO</a></li>
+    </ul>
+    <% include footer %>
   </body>
 </html>
