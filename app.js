@@ -26,6 +26,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/github', github);
 
+// Vendors - Absolute Path
+app.use('/vendor', express.static(
+  path.join(__dirname, 'public', 'javascripts')));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
