@@ -5,10 +5,24 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// Routing
 var routes = require('./routes/index');
 var github = require('./routes/github');
 
+// Webpack
+var webpack = require('webpack');
+var webpackConfig = require('./webpack.config');
+var compiler = webpack(webpackConfig);
+
+
 var app = express();
+
+// Webpack middleware
+app.use(require("webpack-dev-middleware")(compiler, {
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+}));
+
+app.use(require("webpack-hot-middleware")(compiler));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -60,6 +74,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
 
 
 module.exports = app;

@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -44,18 +44,12 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	module.exports = __webpack_require__(3);
 
-	var _test = __webpack_require__(1);
-
-	console.log('indexEntry'); // import $ from 'jquery'
-
-	console.log('testing from ' + _test.test);
-
-	alert('body', $('body'));
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -64,6 +58,18 @@
 	  value: true
 	});
 	var test = exports.test = "in test file";
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _test = __webpack_require__(2);
+
+	console.log('--------asdf'); // import $ from 'jquery'
+
+	console.log('testing from ' + _test.test);
 
 /***/ }
 /******/ ]);

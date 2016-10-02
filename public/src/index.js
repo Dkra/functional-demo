@@ -1,7 +1,5 @@
 // import $ from 'jquery'
 import { test } from './test'
 
-console.log('indexEntry');
+console.log('--------asdf');
 console.log(`testing from ${test}`);
-
-alert('body', $('body'))
