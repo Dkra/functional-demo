@@ -3,7 +3,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     indexEntry: ['./public/src/index.js'],
-    // githubEntry: ['./public/src/github.js']
+    noteEntry: ['./public/src/note.js']
   },
 
   output: {

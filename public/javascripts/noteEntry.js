@@ -44,22 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(3);
 
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _test = __webpack_require__(2);
-
-	console.log('index.js'); // import $ from 'jquery'
-
-	console.log('testing from ' + _test.test);
-
-/***/ },
+/* 1 */,
 /* 2 */
 /***/ function(module, exports) {
 
@@ -69,6 +58,18 @@
 	  value: true
 	});
 	var test = exports.test = "in test file";
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _test = __webpack_require__(2);
+
+	console.log('Note.js'); // import $ from 'jquery'
+
+	console.log('testing from ' + _test.test);
 
 /***/ }
 /******/ ]);
