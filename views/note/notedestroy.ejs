@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../head %>
+  </head>
+  <body>
+    <% include ../header %>
+
+    <% include noteHeader %>
+
+    <form method='POST' action='/note/destroy/confirm'>
+      <input type='hidden' name='notekey' value='<%=
+                           note ? notekey : "" %>'>
+      <p>Delete <%= note.title %> ?</p>
+      <br/>
+      <input type='submit' value='DELETE' /> <a href="/note/view?key=<%= notekey %>">Cancel</a>
+    </form>
+
+    <% include ../footer %>
+    <script src="vendor/indexEntry.js"></script>
+  </body>
+</html>

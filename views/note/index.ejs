@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../head %>
+  </head>
+  <body>
+    <% include ../header %>
+
+    <% include noteHeader %>
+
+    <% if (notelist.length > 0) { %>
+    <ul><%
+    for (var note of notelist) {
+      %><li><%= note.key %>:
+      <a href="/note/view?key=<%= note.key %>"><%= note.title %></a>
+      </li><%
+    }
+    %></ul>
+    <% } %>
+
+    <% include ../footer %>
+    <script src="vendor/indexEntry.js"></script>
+  </body>
+</html>

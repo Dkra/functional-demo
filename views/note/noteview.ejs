@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../head %>
+  </head>
+  <body>
+    <% include ../header %>
+
+    <% include noteHeader %>
+
+    <h3><%= note ? note.title : "" %></h3>
+    <p><%= note ? note.body : "" %></p>
+    <p>Key: <%= notekey %></p>
+    <% if (notekey) { %>
+        <hr/>
+        <p><a href="/note/destroy?key=<%= notekey %>">Delete</a>
+         | <a href="/note/edit?key=<%= notekey %>">Edit</a></p>
+    <% } %>
+
+    <% include ../footer %>
+    <script src="vendor/indexEntry.js"></script>
+  </body>
+</html>

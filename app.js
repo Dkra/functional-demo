@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 
 // Routing
 var routes = require('./routes/index');
-var github = require('./routes/github');
+var githubRoute = require('./routes/github');
+var noteRoute = require('./routes/note')
 
 // Webpack
 var webpack = require('webpack');
@@ -37,8 +38,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routing
 app.use('/', routes);
-app.use('/github', github);
+app.use('/github', githubRoute);
+app.use('/note', noteRoute);
+
+// var users = require('./routes/users');
+// app.use('/users', users);
 
 // Vendors - Absolute Path
 app.use('/vendor', express.static(
