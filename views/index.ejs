@@ -5,19 +5,28 @@
   </head>
   <body>
     <% include header %>
-    <h1><%= title %></h1>
+    <h1>Functionality</h1>
     <p>Welcome to <%= title %></p>
-    <div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-    <ul>
-      <li><a href="github">Github Api</a></li>
-      <li><a href="note">CRUD Notes &amp; MongoDB</a></li>
-      <li><a href="socketio">SocketIO</a></li>
-    </ul>
+    <section>
+      <ul>
+        <li>Facebook Login Api<br>
+          <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+          </fb:login-button>
+          <div id="status">
+          </div>
+        </li>
+        <li><a href="github">Github Api</a></li>
+        <li><a href="note">CRUD Notes &amp; MongoDB</a></li>
+      </ul>
+    </section>
+    <br>
+    <section>
+      <p>Todo:</p>
+      <ul>
+        <li><a href="socketio">SocketIO</a></li>
+        <li><a href="socketio">Paypal</a></li>
+      </ul>
+    </section>
     <% include footer %>
     <script src="vendor/indexEntry.js"></script>
   </body>
